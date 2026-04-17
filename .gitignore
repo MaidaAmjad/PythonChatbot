@@ -1,0 +1,6 @@
+.env
+chat_history.json
+__pycache__/
+*.pyc
+.streamlit/
+.gemini/

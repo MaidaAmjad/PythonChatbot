@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nocturnal Intelligence | Desktop Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#490013",
+                    "primary-dim": "#8455ef",
+                    "tertiary-fixed": "#ff8ed2",
+                    "primary-fixed-dim": "#a27cff",
+                    "on-primary-fixed-variant": "#370086",
+                    "on-primary-fixed": "#000000",
+                    "secondary": "#d5e3fc",
+                    "surface-variant": "#192540",
+                    "secondary-fixed-dim": "#c7d5ed",
+                    "surface": "#060e20",
+                    "outline": "#6d758c",
+                    "on-error-container": "#ffb2b9",
+                    "surface-container-low": "#091328",
+                    "on-secondary-fixed-variant": "#4e5c71",
+                    "surface-container-lowest": "#000000",
+                    "error": "#ff6e84",
+                    "tertiary-dim": "#ef81c4",
+                    "tertiary": "#ffa5d9",
+                    "on-tertiary": "#701455",
+                    "error-container": "#a70138",
+                    "on-surface": "#dee5ff",
+                    "background": "#060e20",
+                    "on-secondary-fixed": "#324053",
+                    "on-primary-container": "#2b006e",
+                    "tertiary-fixed-dim": "#ef81c4",
+                    "primary": "#ba9eff",
+                    "inverse-primary": "#6e3bd7",
+                    "on-primary": "#39008c",
+                    "inverse-surface": "#faf8ff",
+                    "on-secondary-container": "#c3d1e9",
+                    "surface-container-high": "#141f38",
+                    "surface-container-highest": "#192540",
+                    "outline-variant": "#40485d",
+                    "surface-container": "#0f1930",
+                    "secondary-dim": "#c7d5ed",
+                    "error-dim": "#d73357",
+                    "on-background": "#dee5ff",
+                    "surface-tint": "#ba9eff",
+                    "surface-dim": "#060e20",
+                    "surface-bright": "#1f2b49",
+                    "tertiary-container": "#ff8ed2",
+                    "on-tertiary-fixed": "#3b002b",
+                    "on-surface-variant": "#a3aac4",
+                    "primary-container": "#ae8dff",
+                    "inverse-on-surface": "#4d556b",
+                    "on-tertiary-fixed-variant": "#6e1354",
+                    "primary-fixed": "#ae8dff",
+                    "secondary-container": "#3a485b",
+                    "on-tertiary-container": "#63054a",
+                    "secondary-fixed": "#d5e3fc",
+                    "on-secondary": "#455367"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #060e20;
+            color: #dee5ff;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(6, 14, 32, 0.6);
+            backdrop-filter: blur(24px);
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #192540;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden">
+<!-- SideNavBar Anchor -->
+<aside class="h-screen w-72 flex flex-col p-6 space-y-4 bg-[#091328] dark:bg-slate-900 border-none relative z-40">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tighter text-[#dee5ff] dark:text-slate-100 font-headline leading-tight">Nocturnal Intelligence</h1>
+<p class="text-[10px] uppercase tracking-widest text-primary-dim font-bold">Premium Tier</p>
+</div>
+</div>
+<button class="w-full py-4 px-6 rounded-full bg-gradient-to-r from-primary to-primary-dim text-on-primary font-headline font-extrabold text-sm flex items-center justify-center gap-2 transition-all hover:shadow-[0px_0px_15px_rgba(186,158,255,0.4)] active:scale-95">
+<span class="material-symbols-outlined text-lg">add</span>
+            New Chat
+        </button>
+<nav class="flex-1 space-y-1 overflow-y-auto pt-4">
+<div class="px-2 mb-2">
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest">Main</span>
+</div>
+<a class="flex items-center gap-3 p-3 rounded-lg text-[#dee5ff] bg-[#192540] transition-colors duration-300 font-['Manrope'] font-semibold tracking-tight text-sm" href="#">
+<span class="material-symbols-outlined text-[#ba9eff]">history</span>
+                Recent Chats
+            </a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-[#a3aac4] hover:text-[#dee5ff] hover:bg-[#0f1930] transition-colors duration-300 font-['Manrope'] font-semibold tracking-tight text-sm" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+                Archives
+            </a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-[#a3aac4] hover:text-[#dee5ff] hover:bg-[#0f1930] transition-colors duration-300 font-['Manrope'] font-semibold tracking-tight text-sm" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+                Templates
+            </a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-[#a3aac4] hover:text-[#dee5ff] hover:bg-[#0f1930] transition-colors duration-300 font-['Manrope'] font-semibold tracking-tight text-sm" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3 p-2 rounded-xl hover:bg-surface-container transition-all cursor-pointer">
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover" data-alt="Close-up portrait of a professional man in a dark environment with cool cyan and violet rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDekFkAsk14AV6y00Kp7MBL_endtUpKxLoLvM5IV4dmehKnBCF4cJcj8XD3Wi5RJGJ5ui0zDBA7EgfmOFSU3p59IDClanYXpzSH1T07IaQ5UWq_GQPnueJt_WH0xN1-T--bidG-l3h3c5aeUvh5GQ0AOC3DZyArwTDBAT4pSMSI0jhaJPJHy_94e5HuiWoyS6fMbeYEnENSNQ6Em-Z9PiTzCBrEs-VVKX4aKmaOQR4HN309-Jwrjd8sHcEb8BF37X3oz_x19KrRVbvw"/>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate text-[#dee5ff]">Alex Sterling</p>
+<p class="text-xs text-outline truncate">alex@nocturnal.ai</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col relative bg-surface overflow-hidden">
+<!-- TopAppBar Anchor -->
+<header class="flex justify-between items-center w-full h-16 px-8 sticky top-0 z-50 bg-[#060e20]/60 backdrop-blur-xl">
+<div class="flex items-center gap-2">
+<h2 class="text-lg font-black tracking-tight text-[#dee5ff] font-headline">Recent Chats</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-lg">search</span>
+<input class="bg-surface-container-low border-none rounded-full py-1.5 pl-10 pr-4 text-xs w-64 focus:ring-1 focus:ring-primary-dim text-on-surface-variant placeholder:text-outline transition-all" placeholder="Search conversations..." type="text"/>
+</div>
+<div class="flex items-center gap-4 text-[#ba9eff]">
+<button class="hover:text-white transition-opacity active:opacity-100 opacity-90">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<button class="hover:text-white transition-opacity active:opacity-100 opacity-90">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Chat Experience Area -->
+<div class="flex-1 overflow-y-auto px-4 md:px-0">
+<div class="max-w-3xl mx-auto py-12 flex flex-col gap-8">
+<!-- Initial State / Empty State (Editorial Style) -->
+<div class="mb-12">
+<h3 class="text-4xl md:text-5xl font-black font-headline tracking-tighter text-on-surface leading-none mb-4">
+                        Good evening,<br/><span class="text-primary">how can I assist?</span>
+</h3>
+<p class="text-on-surface-variant font-body max-w-lg leading-relaxed">
+                        I am your high-performance neural concierge. From complex data analysis to creative syntheses, I operate at the edge of the void.
+                    </p>
+</div>
+<!-- Bento Suggestion Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-6 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group border border-outline-variant/5">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">code</span>
+</div>
+<h4 class="font-headline font-bold mb-2">Analyze Python Script</h4>
+<p class="text-xs text-on-surface-variant">Review legacy code for optimization and vulnerability patches.</p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group border border-outline-variant/5">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center mb-4 text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-all">
+<span class="material-symbols-outlined">edit_note</span>
+</div>
+<h4 class="font-headline font-bold mb-2">Draft Executive Summary</h4>
+<p class="text-xs text-on-surface-variant">Synthesize the Q3 market trends into a concise board-ready brief.</p>
+</div>
+</div>
+<!-- Chat Messages -->
+<div class="flex flex-col gap-10 mt-12">
+<!-- AI Bubble -->
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0 relative">
+<!-- Visualized Pulse (AI Loading State Style) -->
+<div class="absolute inset-0 rounded-full bg-primary-dim/20 blur-md scale-150"></div>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="max-w-[85%] bg-surface-container-highest p-5 rounded-xl rounded-bl-sm text-sm font-body leading-relaxed text-on-surface shadow-sm">
+                            Hello Alex. I've finished the deep-scan of the repository you mentioned. There are three key architectural bottlenecks in the data ingestion layer. Would you like a technical breakdown or a summarized fix-list?
+                        </div>
+</div>
+<!-- User Bubble -->
+<div class="flex items-start gap-4 flex-row-reverse">
+<div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional man in a dark environment with cool cyan and violet rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwSmSArlY_sfxl3qlnZzT-T4sF3zJ_dYSF29SI0sNI_bP0tB6UbqJnzvT7leoY4F5Xwz85uGEHYCgvRviYkJwLXeGr_ecKY2GU43O1B7CrRZDD5UoAL8xLPOe5fa7wNe3L8_lF9Uda4vsxFro-arHLQN092iV7D7WDBO-0bamPLvUcxyVPH6Eglvz1Y2hUFTNlh2Np9Av3_gAJlaku9QZLhN1O9oCX98HuH_7dD5Fy1kTBG1hgGD3mVWUKZwgDlciNOin800xyEipz"/>
+</div>
+<div class="max-w-[85%] bg-primary-container p-5 rounded-xl rounded-br-sm text-sm font-body leading-relaxed text-on-primary-container font-medium">
+                            Let's start with the summarized fix-list. Prioritize the memory leak issues first.
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Input Area -->
+<div class="w-full p-8 bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto relative group">
+<div class="bg-surface-container-low rounded-xl flex items-end p-2 border border-outline-variant/10 focus-within:bg-surface-bright transition-all duration-300">
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-3 px-2 text-on-surface placeholder:text-outline/50 resize-none font-body" placeholder="Type your message..." rows="1"></textarea>
+<button class="m-1 p-2 rounded-lg bg-primary-dim text-on-primary flex items-center justify-center hover:bg-primary transition-all active:scale-95">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<p class="text-[10px] text-center mt-3 text-outline tracking-wider uppercase font-semibold opacity-50">
+                    Encrypted Session • Enterprise Grade Security
+                </p>
+</div>
+</div>
+</main>
+</body></html>
